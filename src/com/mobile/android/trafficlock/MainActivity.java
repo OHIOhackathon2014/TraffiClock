@@ -175,11 +175,11 @@ public class MainActivity extends Activity implements WeatherGrabber.WeatherList
         if(trafficTime != -1){
             int hours = trafficTime / 60;
             final int minutes = trafficTime % 60;
-            final String hoursText = hours > 0 ? hours + " hr" + (hours != 1 ? "s" : "") + " and " : "";
+            final String hoursText = hours > 0 ? hours + " hour" + (hours != 1 ? "s" : "") + " and " : "";
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    trafficValueText.setText(hoursText + minutes + " min(s) to destination!");
+                    trafficValueText.setText(hoursText + minutes + " minutes to destination!");
                 }
             });
         }

@@ -121,7 +121,7 @@ public class WeatherGrabber implements DataGrabber {
             JSONObject now = weather.getJSONObject("data").getJSONArray("current_condition").getJSONObject(0);
             double precip = now.getDouble("precipMM");
             double closestAvgPrecip = getClosestPrecip();
-            description = now.getInt("temp_F") + "F, " + now.getJSONArray("weatherDesc")
+            description = now.getInt("temp_F") + " F, " + now.getJSONArray("weatherDesc")
                         .getJSONObject(0).getString("value");
             double diff = precip - closestAvgPrecip;
             double errFromMean = diff / closestAvgPrecip;
