@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-        >
-    <TextView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+    <RelativeLayout
+            android:id="@+id/addServer"
+            android:orientation="vertical"
+            android:background="@drawable/radial_gradient"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, Main"
-            />
-</LinearLayout>
-
+            android:layout_height="fill_parent" >
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:id="@+id/buttons"
+                      android:layout_width="fill_parent"
+                      android:layout_marginTop="15dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="37dp"
+                      android:layout_marginRight="37dp"
+                      android:orientation="horizontal">
+            <Button android:text="Reset"
+                    android:id="@+id/resetAddServer"
+                    android:textSize="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/red_button"
+                    style="@style/ButtonText"
+                    android:layout_weight="1"
+                    />
+            <Button android:text="QR Code"
+                    android:id="@+id/qrCode"
+                    android:textSize="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yellow_button"
+                    style="@style/ButtonText"
+                    android:layout_weight="1"
+                    />
+        </LinearLayout>
+        <ImageView
+                android:id="@+id/qrCodeImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/buttons"
+                android:contentDescription="QR Code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:padding="7dp"
+                android:background="@drawable/all_round_edittext"
+                />
+    </RelativeLayout>
+</ScrollView>
