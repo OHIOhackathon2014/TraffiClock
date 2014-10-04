@@ -3,7 +3,9 @@ package com.mobile.android.trafficlock;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.Button;
 import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
@@ -18,6 +20,11 @@ public class MainActivity extends Activity {
         Intent dataServiceIntent = new Intent(this, DataService.class);
         startService(dataServiceIntent);
         ActionBar actionBar = getActionBar();
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putBoolean("activated", false);
 
         actionBar.setDisplayOptions(
                 ActionBar.DISPLAY_SHOW_CUSTOM,
