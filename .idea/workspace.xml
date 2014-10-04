@@ -6,6 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/res/values/strings.xml" changelist="69133b25-622f-410c-93e0-48aa0a2281d5" time="1412384420170" ignored="false" />
     <file path="$PROJECT_DIR$/res/layout/main.xml" changelist="69133b25-622f-410c-93e0-48aa0a2281d5" time="1412384421297" ignored="false" />
+    <file path="/Main.java" changelist="69133b25-622f-410c-93e0-48aa0a2281d5" time="1412384762756" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +64,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="HackOHIO" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="25" selection-start="122" selection-end="122" vertical-scroll-proportion="0.10273973">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/Main.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
@@ -387,6 +415,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="25" selection-start="122" selection-end="122" vertical-scroll-proportion="0.10273973">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 

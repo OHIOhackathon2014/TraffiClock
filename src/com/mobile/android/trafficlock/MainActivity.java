@@ -3,7 +3,7 @@ package com.mobile.android.trafficlock;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class Main extends Activity {
+public class MainActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
