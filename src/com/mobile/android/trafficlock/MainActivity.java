@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Button;
@@ -24,7 +25,7 @@ public class MainActivity extends Activity {
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         final SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putBoolean("activated", false);
+        editor.putBoolean("activated", false).commit();
 
         actionBar.setDisplayOptions(
                 ActionBar.DISPLAY_SHOW_CUSTOM,
@@ -62,12 +63,22 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
                 // The service is not activated
                 if (!sharedPreferences.getBoolean("activated", false)) {
-                    activateButton.setBackground(getDrawable(R.drawable.red_button));
+                    if (Build.VERSION.SDK_INT >= 16) {
+                        activateButton.setBackground(getResources().getDrawable(R.drawable.red_button));
+                    }
+                    else {
+                        activateButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_button));
+                    }
                     editor.putBoolean("activated", true).commit();
                 }
                 // The service is activated
                 else {
-                    activateButton.setBackground(getDrawable(R.drawable.green_button));
+                    if (Build.VERSION.SDK_INT >= 16) {
+                        activateButton.setBackground(getResources().getDrawable(R.drawable.red_button));
+                    }
+                    else {
+                        activateButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_button));
+                    }
                     editor.putBoolean("activated", false).commit();
                 }
             }
