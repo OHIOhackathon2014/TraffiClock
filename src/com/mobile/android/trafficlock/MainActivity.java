@@ -1,5 +1,7 @@
 package com.mobile.android.trafficlock;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -66,6 +68,16 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
 
         final Button activateButton = (Button) findViewById(R.id.activationButton);
+        ObjectAnimator scaleXAnim = ObjectAnimator.ofFloat(activateButton, "scaleX", 1.0f, 1.05f);
+        ObjectAnimator scaleYAnim = ObjectAnimator.ofFloat(activateButton, "scaleY", 1.0f, 1.05f);
+        scaleXAnim.setRepeatMode(ValueAnimator.REVERSE);
+        scaleYAnim.setRepeatMode(ValueAnimator.REVERSE);
+        scaleXAnim.setRepeatCount(ValueAnimator.INFINITE);
+        scaleYAnim.setRepeatCount(ValueAnimator.INFINITE);
+        scaleXAnim.setDuration(900);
+        scaleYAnim.setDuration(900);
+        scaleXAnim.start();
+        scaleYAnim.start();
 
         activateButton.setOnClickListener(new View.OnClickListener() {
             @Override
