@@ -45,5 +45,14 @@
                 android:layout_below="@id/currWeatherValue"
                 android:textSize="22sp"
                 android:text="@string/currTraffic"/>
+        <TextView
+                android:id="@+id/currTrafficValue"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="35dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currTrafficTitle"
+                android:textSize="18sp"
+                android:text="@string/defaultTraffic"/>
     </RelativeLayout>
 </ScrollView>
