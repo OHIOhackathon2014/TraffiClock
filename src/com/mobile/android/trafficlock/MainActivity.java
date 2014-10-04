@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
 
 public class MainActivity extends Activity {
@@ -13,7 +14,8 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Intent dataServiceIntent = new Intent(this, DataService.class);
+        startService(dataServiceIntent);
         ActionBar actionBar = getActionBar();
 
         actionBar.setDisplayOptions(
@@ -45,4 +47,6 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.main);
     }
+
+
 }
