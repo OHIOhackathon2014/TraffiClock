@@ -8,7 +8,6 @@ lt application files
 .idea/
 *.iml
 *.iws
-.idea/workspace.xml
 
 .DS_Store
 
