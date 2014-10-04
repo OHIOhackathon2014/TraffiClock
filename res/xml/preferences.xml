@@ -19,9 +19,15 @@
         <com.mobile.android.trafficlock.NumberPreference
                 android:key="readyTime"
                 android:dialogLayout="@layout/number_picker"
-                android:summary="Time Needed to be Ready in the Morning"
+                android:summary="Minutes Needed to be Ready in the Morning"
                 android:title="Ready Time" >
         </com.mobile.android.trafficlock.NumberPreference>
+        <com.mobile.android.trafficlock.TimePreference
+                android:key="latestWakeUpTime"
+                android:dialogLayout="@layout/time_picker"
+                android:summary="Latest Possible Wake-up Time"
+                android:title="Latest Wake Up Time" >
+        </com.mobile.android.trafficlock.TimePreference>
     </PreferenceCategory>
 
 </PreferenceScreen>
