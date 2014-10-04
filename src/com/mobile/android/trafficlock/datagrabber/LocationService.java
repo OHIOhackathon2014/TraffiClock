@@ -22,6 +22,10 @@ public class LocationService implements LocationListener{
     private List<ILocationListener> listeners = new ArrayList<ILocationListener>();
     private Location currentLocation;
 
+
+    /**
+     * DON'T CALL THIS SHIT, USE DataService.getInstance().getLocationService() INSTEAD.
+     */
     public LocationService(Context context){
         LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();

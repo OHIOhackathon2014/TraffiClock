@@ -19,16 +19,28 @@ public class DataService extends Service implements LocationService.ILocationLis
 
     private WeatherGrabber wGrabber;
     private TrafficGrabber tGrabber;
+    private LocationService lService;
+
+    private DataService instance;
 
 
     @Override
     public void onCreate(){
 
-        LocationService ls = new LocationService(getApplicationContext());
-        ls.addListener(this);
+        lService = new LocationService(getApplicationContext());
+        lService.addListener(this);
         wGrabber = new WeatherGrabber(getApplicationContext());
         tGrabber = new TrafficGrabber(getApplicationContext());
+        instance = this;
 
+    }
+
+    public LocationService getLocationService(){
+        return lService;
+    }
+
+    public DataService getInstance(){
+        return instance;
     }
 
     @Override
@@ -47,6 +59,11 @@ public class DataService extends Service implements LocationService.ILocationLis
         return wGrabber.getData();
     }
 
+    /**
+     *
+     * @return The number of minutes from the user's current location to the destination location, or -1
+     *  if no data is available yet
+     */
     public double getTrafficTime(){
         return tGrabber.getData();
     }
