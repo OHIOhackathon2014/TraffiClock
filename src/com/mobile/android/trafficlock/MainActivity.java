@@ -4,6 +4,9 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.location.Location;
@@ -19,6 +22,7 @@ import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
 import com.mobile.android.trafficlock.datagrabber.TrafficGrabber;
 import com.mobile.android.trafficlock.datagrabber.WeatherGrabber;
+import com.mobile.android.trafficlock.utils.SetAlarm;
 import com.mobile.android.trafficlock.utils.Utils;
 
 public class MainActivity extends Activity implements WeatherGrabber.WeatherListener, TrafficGrabber.TrafficListener {
@@ -106,6 +110,13 @@ public class MainActivity extends Activity implements WeatherGrabber.WeatherList
         activateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                SetAlarm.setAlarm(getApplicationContext());
+
+
+
+
+
                 // The service is not activated
                 if (!sharedPreferences.getBoolean("activated", false)) {
                     if (Build.VERSION.SDK_INT >= 16) {
