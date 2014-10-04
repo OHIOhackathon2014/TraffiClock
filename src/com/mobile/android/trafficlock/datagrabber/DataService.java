@@ -1,6 +1,7 @@
 package com.mobile.android.trafficlock.datagrabber;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.IBinder;
@@ -8,6 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import com.google.gson.Gson;
+import com.mobile.android.trafficlock.utils.Utils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -41,7 +43,7 @@ public class DataService extends Service{
     public final static double MAX_PRECIP = 5;
 
     private Timer timer;
-    private double weatherData = 0;
+    private double weatherData = -1;
 
     @Override
     public void onCreate(){
@@ -61,6 +63,7 @@ public class DataService extends Service{
     /**
      * Returns how much of a factor the weather is based on the current level of precipitation
      * (0-1.0)
+     * -1 means weather data was not available
      * @return 0-1.0, 0 being no precipitation and 1.0 being >= DataService.MAX_PRECIP;
      */
     public double getWeatherFactor(){
@@ -94,8 +97,10 @@ public class DataService extends Service{
 
         @Override
         public void run() {
-            WeatherTask task = new WeatherTask();
-            task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, (Void[])null);
+            if(Utils.isConnected(getApplicationContext())){
+                WeatherTask task = new WeatherTask();
+                task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, (Void[])null);
+            }
         }
     }
 
