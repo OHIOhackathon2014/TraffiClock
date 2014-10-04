@@ -29,7 +29,7 @@
                 android:text="@string/currWeather"/>
         <TextView
                 android:id="@+id/currWeatherValue"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="35dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
