@@ -6,6 +6,10 @@ lt application files
 *.dex
 
 .idea/
+*.iml
+*.iws
+
+.DS_Store
 
 # Java class files
 *.class
