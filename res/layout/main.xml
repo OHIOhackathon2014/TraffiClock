@@ -13,7 +13,7 @@
                 android:id="@+id/activationButton"
                 android:textSize="35dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="100dp"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:background="@drawable/green_button"
@@ -36,5 +36,14 @@
                 android:layout_below="@id/currWeatherTitle"
                 android:textSize="18sp"
                 android:text="@string/defaultWeather"/>
+        <TextView
+                android:id="@+id/currTrafficTitle"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currWeatherValue"
+                android:textSize="22sp"
+                android:text="@string/currTraffic"/>
     </RelativeLayout>
 </ScrollView>

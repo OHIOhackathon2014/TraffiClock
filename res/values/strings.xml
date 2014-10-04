@@ -10,6 +10,7 @@
     <string name="deactivated">Deactivate</string>
     <string name="currWeather">Current Weather:</string>
     <string name="defaultWeather">No Weather Available</string>
+    <string name="currTraffic">Current Traffic:</string>
     <style name="ButtonText">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
