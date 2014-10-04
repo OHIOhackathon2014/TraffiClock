@@ -4,6 +4,7 @@ import android.content.Context;
 import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import com.mobile.android.trafficlock.datagrabber.DataService;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -67,5 +68,9 @@ public class Utils {
             }
         }
         return ret;
+    }
+
+    public Location getLastLocation(){
+        return DataService.getInstance().getLocationService().getCurrentLocation();
     }
 }

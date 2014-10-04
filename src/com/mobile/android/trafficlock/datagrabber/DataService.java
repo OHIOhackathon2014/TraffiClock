@@ -21,7 +21,7 @@ public class DataService extends Service implements LocationService.ILocationLis
     private TrafficGrabber tGrabber;
     private LocationService lService;
 
-    private DataService instance;
+    private static DataService instance;
 
 
     @Override
@@ -39,7 +39,7 @@ public class DataService extends Service implements LocationService.ILocationLis
         return lService;
     }
 
-    public DataService getInstance(){
+    public static DataService getInstance(){
         return instance;
     }
 
