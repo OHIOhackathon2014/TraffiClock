@@ -9,9 +9,9 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" >
         <!--android:background="@drawable/radial_gradient"-->
-        <Button android:text="QR Code"
-                android:id="@+id/qrCode"
-                android:textSize="20dp"
+        <Button android:text="@string/activated"
+                android:id="@+id/activationButton"
+                android:textSize="35dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="150dp"
                 android:layout_width="200dp"
