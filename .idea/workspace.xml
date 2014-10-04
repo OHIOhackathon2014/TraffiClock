@@ -27,7 +27,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c255cb98-e511-4c7f-90a4-780cab61b713" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/Utils.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/Utils.java" />
     </list>
     <ignored path="TraffiClock.iws" />
@@ -42,7 +41,7 @@
     <file path="/NumberPreference.java" changelist="c255cb98-e511-4c7f-90a4-780cab61b713" time="1412405591929" ignored="false" />
     <file path="/fragment.java" changelist="c255cb98-e511-4c7f-90a4-780cab61b713" time="1412407430232" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="c255cb98-e511-4c7f-90a4-780cab61b713" time="1412408066699" ignored="false" />
-    <file path="/Utils.java" changelist="c255cb98-e511-4c7f-90a4-780cab61b713" time="1412413909547" ignored="false" />
+    <file path="/Utils.java" changelist="c255cb98-e511-4c7f-90a4-780cab61b713" time="1412413963077" ignored="false" />
     <file path="/MainActivity.java" changelist="c255cb98-e511-4c7f-90a4-780cab61b713" time="1412413502047" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +144,7 @@
       <file leaf-file-name="Utils.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="15" selection-start="2524" selection-end="2524" vertical-scroll-proportion="0.8397436">
+            <state line="72" column="18" selection-start="2488" selection-end="2488" vertical-scroll-proportion="0.8076923">
               <folding />
             </state>
           </provider>
@@ -187,8 +186,8 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/LocationService.java" />
-        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/Utils.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" />
+        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/Utils.java" />
       </list>
     </option>
   </component>
@@ -803,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="15" selection-start="2524" selection-end="2524" vertical-scroll-proportion="0.8397436">
+        <state line="72" column="18" selection-start="2488" selection-end="2488" vertical-scroll-proportion="0.8076923">
           <folding />
         </state>
       </provider>

@@ -70,7 +70,7 @@ public class Utils {
         return ret;
     }
 
-    public Location getLastLocation(){
+    public static Location getLastLocation(){
         return DataService.getInstance().getLocationService().getCurrentLocation();
     }
 }
