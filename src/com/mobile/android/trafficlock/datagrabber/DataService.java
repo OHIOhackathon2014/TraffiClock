@@ -2,7 +2,9 @@ package com.mobile.android.trafficlock.datagrabber;
 
 import android.app.Service;
 import android.content.Intent;
+import android.location.Location;
 import android.os.IBinder;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Rniemo
@@ -12,23 +14,43 @@ import android.os.IBinder;
  */
 
 
-public class DataService extends Service{
+public class DataService extends Service implements LocationService.ILocationListener{
 
 
     private WeatherGrabber wGrabber;
+    private TrafficGrabber tGrabber;
+    private LocationService lService;
+
+    private static DataService instance;
 
 
     @Override
     public void onCreate(){
 
+        instance = this;
+        lService = new LocationService(getApplicationContext());
+        lService.addListener(this);
         wGrabber = new WeatherGrabber(getApplicationContext());
+        tGrabber = new TrafficGrabber(getApplicationContext());
 
+    }
 
+    public void queryTrafficData(){
+        tGrabber.query();
+    }
+
+    public LocationService getLocationService(){
+        return lService;
+    }
+
+    public static DataService getInstance(){
+        return instance;
     }
 
     @Override
     public void onDestroy(){
         wGrabber.destroy();
+        tGrabber.destroy();
     }
 
     /**
@@ -38,7 +60,20 @@ public class DataService extends Service{
      * @return 0-1.0, 0 being no precipitation and 1.0 being >= DataService.MAX_PRECIP;
      */
     public double getWeatherFactor(){
-        return wGrabber.getFactor();
+        return wGrabber.getData();
+    }
+
+    public String getWeatherDescription(){
+        return wGrabber.getDescription();
+    }
+
+    /**
+     *
+     * @return The number of minutes from the user's current location to the destination location, or -1
+     *  if no data is available yet
+     */
+    public double getTrafficTime(){
+        return tGrabber.getData();
     }
 
 
@@ -50,4 +85,9 @@ public class DataService extends Service{
     }
 
 
+    @Override
+    public void onLocationChanged(Location location) {
+        tGrabber.updateLocation(location);
+        wGrabber.updateLocation(location);
+    }
 }

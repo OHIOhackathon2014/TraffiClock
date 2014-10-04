@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.preference.DialogPreference;
+import android.text.format.DateFormat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TimePicker;
@@ -22,8 +23,8 @@ public class TimePreference extends DialogPreference {
     @Override
     public void onBindDialogView(View view) {
         timePicker = (TimePicker) view.findViewById(R.id.wakeUpNoLaterThan);
-        timePicker.setIs24HourView(true);
-        timePicker.setCurrentHour(getSharedPreferences().getInt(getKey() + ".hours", startHour));
+        timePicker.setIs24HourView(DateFormat.is24HourFormat(getContext()));
+                timePicker.setCurrentHour(getSharedPreferences().getInt(getKey() + ".hours", startHour));
         timePicker.setCurrentMinute(getSharedPreferences().getInt(getKey() + ".minutes", startMinutes));
     }
 
