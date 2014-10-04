@@ -37,7 +37,7 @@
                     android:layout_marginLeft="2.5dp"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/yellow_button"
+                    android:background="@drawable/green_button"
                     style="@style/ButtonText"
                     android:layout_weight="1"
                     />
