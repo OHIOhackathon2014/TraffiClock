@@ -46,11 +46,11 @@ public class AlarmEvent extends BroadcastReceiver {
 
 
         KeyguardManager km = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
-        final KeyguardManager.KeyguardLock kl=km.newKeyguardLock("My_App");
+        final KeyguardManager.KeyguardLock kl=km.newKeyguardLock("DialogActivity");
         kl.disableKeyguard();
 
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-        PowerManager.WakeLock wl=pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.FULL_WAKE_LOCK, "My_App");
+        PowerManager.WakeLock wl=pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.FULL_WAKE_LOCK, "DialogActivity");
         wl.acquire();
 
 //        AlertDialog.Builder ad_b=new AlertDialog.Builder(context);

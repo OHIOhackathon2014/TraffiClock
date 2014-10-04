@@ -37,6 +37,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/AlarmEvent.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/AlarmEvent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -111,24 +112,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlarmEvent.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AlarmEvent.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/AlarmEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="519" max-vertical-offset="1020">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.18762475" vertical-offset="296" max-vertical-offset="1020">
+              <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8083832" vertical-offset="0" max-vertical-offset="735">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
               <folding>
-                <element signature="e#875#893#0" expanded="true" />
-                <element signature="e#1421#1439#0" expanded="true" />
+                <element signature="e#949#967#0" expanded="true" />
+                <element signature="e#1495#1513#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,9 +188,9 @@
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java" />
         <option value="$PROJECT_DIR$/res/layout/alert_dialog.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/DialogActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/AlarmEvent.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -632,8 +633,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="675">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           <folding>
-            <element signature="e#875#893#0" expanded="true" />
-            <element signature="e#1421#1439#0" expanded="true" />
+            <element signature="e#949#967#0" expanded="true" />
+            <element signature="e#1495#1513#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,8 +691,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="615">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#875#893#0" expanded="true" />
-            <element signature="e#1421#1439#0" expanded="true" />
+            <element signature="e#949#967#0" expanded="true" />
+            <element signature="e#1495#1513#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -733,8 +734,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="585">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#875#893#0" expanded="true" />
-            <element signature="e#1421#1439#0" expanded="true" />
+            <element signature="e#949#967#0" expanded="true" />
+            <element signature="e#1495#1513#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,21 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/DialogActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="645">
-          <caret line="25" column="73" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#510#552#0" expanded="true" />
-            <element signature="e#641#674#0" expanded="true" />
-            <element signature="e#748#775#0" expanded="true" />
-            <element signature="e#777#1055#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2095808" vertical-offset="519" max-vertical-offset="1245">
@@ -832,22 +818,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/AlarmEvent.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/DialogActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="519" max-vertical-offset="1020">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="645">
+          <caret line="25" column="73" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#510#552#0" expanded="true" />
+            <element signature="e#641#674#0" expanded="true" />
+            <element signature="e#748#775#0" expanded="true" />
+            <element signature="e#777#1055#0" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8083832" vertical-offset="0" max-vertical-offset="735">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
           <folding>
-            <element signature="e#875#893#0" expanded="true" />
-            <element signature="e#1421#1439#0" expanded="true" />
+            <element signature="e#949#967#0" expanded="true" />
+            <element signature="e#1495#1513#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/AlarmEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18762475" vertical-offset="296" max-vertical-offset="1020">
+          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
