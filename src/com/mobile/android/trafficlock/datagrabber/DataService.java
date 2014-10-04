@@ -2,7 +2,9 @@ package com.mobile.android.trafficlock.datagrabber;
 
 import android.app.Service;
 import android.content.Intent;
+import android.location.Location;
 import android.os.IBinder;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Rniemo
@@ -12,23 +14,27 @@ import android.os.IBinder;
  */
 
 
-public class DataService extends Service{
+public class DataService extends Service implements LocationService.ILocationListener{
 
 
     private WeatherGrabber wGrabber;
+    private TrafficGrabber tGrabber;
 
 
     @Override
     public void onCreate(){
 
+        LocationService ls = new LocationService(getApplicationContext());
+        ls.addListener(this);
         wGrabber = new WeatherGrabber(getApplicationContext());
-
+        tGrabber = new TrafficGrabber(getApplicationContext());
 
     }
 
     @Override
     public void onDestroy(){
         wGrabber.destroy();
+        tGrabber.destroy();
     }
 
     /**
@@ -38,7 +44,11 @@ public class DataService extends Service{
      * @return 0-1.0, 0 being no precipitation and 1.0 being >= DataService.MAX_PRECIP;
      */
     public double getWeatherFactor(){
-        return wGrabber.getFactor();
+        return wGrabber.getData();
+    }
+
+    public double getTrafficTime(){
+        return tGrabber.getData();
     }
 
 
@@ -50,4 +60,8 @@ public class DataService extends Service{
     }
 
 
+    @Override
+    public void onLocationChanged(Location location) {
+        tGrabber.updateLocation(location);
+    }
 }

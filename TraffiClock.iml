@@ -16,6 +16,7 @@
     <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="library" name="gson-2.2.4" level="project" />
     <orderEntry type="library" name="arcgis-android-api" level="project" />
+    <orderEntry type="library" name="arcgis-android-app-toolkit" level="project" />
   </component>
 </module>
 

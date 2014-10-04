@@ -20,7 +20,7 @@ public interface DataGrabber {
      * @return How much this data factors into the time calculation from 0-1.0, 0 being not at all
      * and 1 being a significant amount. negative numbers indicate no data available
      */
-    public double getFactor();
+    public double getData();
 
 
 }

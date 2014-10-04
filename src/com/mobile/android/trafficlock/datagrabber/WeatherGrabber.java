@@ -51,7 +51,7 @@ public class WeatherGrabber implements DataGrabber {
     }
 
     @Override
-    public double getFactor() {
+    public double getData() {
         return weatherData;
     }
 
