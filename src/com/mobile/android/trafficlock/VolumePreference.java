@@ -6,13 +6,9 @@ import android.content.SharedPreferences;
 import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.NumberPicker;
 import android.widget.SeekBar;
 
-/**
- * Created by jkahn on 10/4/14.
- */
-public class VolumePreference extends DialogPreference {
+public class VolumePreference extends DialogPreference implements SeekBar.OnSeekBarChangeListener {
 
     private static final int startVolume = 50;
 
@@ -25,9 +21,9 @@ public class VolumePreference extends DialogPreference {
     @Override
     public void onBindDialogView(View view) {
         super.onBindDialogView(view);
-        seekBar = (SeekBar) view.findViewById(R.id.numberPickerLayout);
+        seekBar = (SeekBar) view.findViewById(R.id.alarmVolume);
         seekBar.setMax(100);
-        seekBar.setProgress(getSharedPreferences().getInt(getKey() + ".minutes", startVolume));
+        seekBar.setProgress(getSharedPreferences().getInt(getKey() + ".progress", startVolume));
     }
 
     @Override
@@ -37,5 +33,20 @@ public class VolumePreference extends DialogPreference {
             editor.putInt(getKey() + ".progress", seekBar.getProgress());
             editor.commit();
         }
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+
     }
 }
