@@ -8,7 +8,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Button;
-import android.widget.Toast;
 import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
 
@@ -26,7 +25,7 @@ public class MainActivity extends Activity {
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         final SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putBoolean("activated", false).commit();
+        editor.putBoolean("activated", false).apply();
 
         actionBar.setDisplayOptions(
                 ActionBar.DISPLAY_SHOW_CUSTOM,
@@ -71,7 +70,7 @@ public class MainActivity extends Activity {
                         activateButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_button));
                     }
                     activateButton.setText(getResources().getString(R.string.deactivated));
-                    editor.putBoolean("activated", true).commit();
+                    editor.putBoolean("activated", true).apply();
                 }
                 // The service is activated
                 else {
@@ -82,7 +81,7 @@ public class MainActivity extends Activity {
                         activateButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.green_button));
                     }
                     activateButton.setText(getResources().getString(R.string.activated));
-                    editor.putBoolean("activated", false).commit();
+                    editor.putBoolean("activated", false).apply();
                 }
             }
         });
