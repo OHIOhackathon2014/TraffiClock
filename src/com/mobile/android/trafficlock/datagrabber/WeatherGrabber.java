@@ -26,18 +26,21 @@ import java.util.TimerTask;
 public class WeatherGrabber implements DataGrabber {
 
 
-    public final static double MAX_PRECIP = 5;
+    public final static double MAX_PRECIP = 10;
     public final static int TIME_INTERVAL = 1000 * 60; // in ms
 
     private Timer timer;
     private Context context;
     private double weatherData = -1;
-    private WeatherListener listener;
+    private String description = "No weather data available";
+
+    private static WeatherListener listener;
 
     public WeatherGrabber(Context context){
         this.context = context;
         timer = new Timer();
         timer.scheduleAtFixedRate(new DataTimerTask(), 0, TIME_INTERVAL);
+        timer.schedule(new DataTimerTask(), 0);
     }
 
     public void destroy(){
@@ -55,12 +58,18 @@ public class WeatherGrabber implements DataGrabber {
         return weatherData;
     }
 
+    public String getDescription(){
+        return description;
+    }
+
     private void processWeatherData(JSONObject weather){
         if(weather == null)
             return;
         try {
-            JSONObject now = weather.getJSONObject("data").getJSONObject("current_condition");
+            JSONObject now = weather.getJSONObject("data").getJSONArray("current_condition").getJSONObject(0);
             double precip = now.getDouble("precipMM");
+            description = now.getInt("temp_F") + " F, " + now.getJSONArray("weatherDesc")
+                        .getJSONObject(0).getString("value");
             weatherData = precip / MAX_PRECIP;
             if(weatherData > 1){
                 weatherData = 1;
@@ -69,22 +78,26 @@ public class WeatherGrabber implements DataGrabber {
             e.printStackTrace();
         }
         if(listener != null){
-            listener.weatherUpdated(weatherData);
+            listener.weatherFactorUpdated(weatherData);
+            listener.weatherDescriptionUpdated(description);
         }
 
     }
 
-    public void setWeatherListener(WeatherListener listener){
-        this.listener = listener;
+    public static void setWeatherListener(WeatherListener l){
+        listener = l;
     }
 
-    public void removeWeatherListener(){
-        this.listener = null;
+    public static void removeWeatherListener(){
+        listener = null;
     }
 
-    interface WeatherListener {
 
-        public void weatherUpdated(double factor);
+    public interface WeatherListener {
+
+        public void weatherFactorUpdated(double factor);
+
+        public void weatherDescriptionUpdated(String description);
 
     }
 

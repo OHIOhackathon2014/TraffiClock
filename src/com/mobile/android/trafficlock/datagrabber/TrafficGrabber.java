@@ -52,26 +52,40 @@ public class TrafficGrabber implements DataGrabber{
 
 
     // esri updates traffic every 5 minutes
-    public final static int TIME_INTERVAL = 1000 * 30 * 1; // in ms
-    public final static int MAX_TRAVEL_TIME = 523523;
+    public final static int TIME_INTERVAL = 1000 * 60 * 5; // in ms
     private Timer timer;
     private Context context;
     private double trafficData = -1;
-    private TrafficListener listener;
 
-    // used for projecting points
-    final SpatialReference wm = SpatialReference.create(102100);
-    final SpatialReference egs = SpatialReference.create(4326);
-    private RouteTask routeTask;
+    private static TrafficListener listener;
+
     private String destinationAddress;
     private Location destinationLocation;
     private Location location;
 
     public TrafficGrabber(Context context){
         this.context = context;
+
+        if(location == null){
+            location = Utils.getLastLocation();
+        }
         timer = new Timer();
+        timer.schedule(new DataTimerTask(), 0);
         timer.scheduleAtFixedRate(new DataTimerTask(), 0, TIME_INTERVAL);
-        Log.e("k", "running\n\n\n\n\nmaking traffic grabber");
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        prefs.registerOnSharedPreferenceChangeListener(new SharedPreferences.OnSharedPreferenceChangeListener() {
+            @Override
+            public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+                if(s.equals("prefDestination")){
+                    timer.schedule(new DataTimerTask(), 0);
+                    listener.trafficUpdated("Calculating...");
+                }
+            }
+        });
+    }
+
+    public void query(){
+        timer.schedule(new DataTimerTask(), 0);
     }
 
     public void destroy(){
@@ -95,6 +109,9 @@ public class TrafficGrabber implements DataGrabber{
     }
 
     public void updateLocation(Location loc){
+        if(location == null){
+            timer.schedule(new DataTimerTask(), 0);
+        }
         this.location = loc;
     }
 
@@ -109,23 +126,26 @@ public class TrafficGrabber implements DataGrabber{
         }catch(Exception e){
             e.printStackTrace();
         }
+        Log.e("ohio", "listener: " + listener);
         if(listener != null){
             listener.trafficUpdated(trafficData);
         }
 
     }
 
-    public void setTrafficListener(TrafficListener listener){
-        this.listener = listener;
+    public static void setTrafficListener(TrafficListener l){
+        listener = l;
     }
 
-    public void removeTrafficListener(){
-        this.listener = null;
+    public static void removeTrafficListener(){
+        listener = null;
     }
 
-    interface TrafficListener {
+    public interface TrafficListener {
 
         public void trafficUpdated(double factor);
+
+        public void trafficUpdated(String message);
 
     }
 

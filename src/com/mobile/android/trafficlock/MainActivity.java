@@ -13,13 +13,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
+import com.mobile.android.trafficlock.datagrabber.TrafficGrabber;
 import com.mobile.android.trafficlock.datagrabber.WeatherGrabber;
 import com.mobile.android.trafficlock.utils.Utils;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements WeatherGrabber.WeatherListener, TrafficGrabber.TrafficListener {
 
 
     private Location destinationLocation;
@@ -30,8 +32,12 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Intent dataServiceIntent = new Intent(this, DataService.class);
         startService(dataServiceIntent);
+        TrafficGrabber.setTrafficListener(this);
+        WeatherGrabber.setWeatherListener(this);
+
         ActionBar actionBar = getActionBar();
 
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -95,6 +101,8 @@ public class MainActivity extends Activity {
         scaleXAnim.start();
         scaleYAnim.start();
 
+
+
         activateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,6 +147,58 @@ public class MainActivity extends Activity {
             GeocodeTask geocodeTask = new GeocodeTask();
             geocodeTask.execute(dest);
         }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        if(DataService.getInstance() != null){
+            DataService.getInstance().queryTrafficData();
+        }
+    }
+
+    @Override
+    public void trafficUpdated(double time) {
+        final TextView trafficValueText = (TextView) findViewById(R.id.currTrafficValue);
+        int trafficTime = (int) Math.round(time);
+        if(trafficTime != -1){
+            int hours = trafficTime / 60;
+            final int minutes = trafficTime % 60;
+            final String hoursText = hours > 0 ? hours + " hour" + (hours != 1 ? "s" : "") + " and " : "";
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    trafficValueText.setText(hoursText + minutes + " minutes to destination!");
+                }
+            });
+        }
+    }
+
+    @Override
+    public void trafficUpdated(final String message){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                TextView trafficValueText = (TextView) findViewById(R.id.currTrafficValue);
+                trafficValueText.setText(message);
+            }
+        });
+    }
+
+    @Override
+    public void weatherFactorUpdated(double factor) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void weatherDescriptionUpdated(final String description) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                TextView weatherValueText = (TextView) findViewById(R.id.currWeatherValue);
+                weatherValueText.setText(description);
+            }
+        });
     }
 
     private class GeocodeTask extends AsyncTask<String, Void, Location> {

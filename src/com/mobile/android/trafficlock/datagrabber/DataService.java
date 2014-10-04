@@ -27,12 +27,16 @@ public class DataService extends Service implements LocationService.ILocationLis
     @Override
     public void onCreate(){
 
+        instance = this;
         lService = new LocationService(getApplicationContext());
         lService.addListener(this);
         wGrabber = new WeatherGrabber(getApplicationContext());
         tGrabber = new TrafficGrabber(getApplicationContext());
-        instance = this;
 
+    }
+
+    public void queryTrafficData(){
+        tGrabber.query();
     }
 
     public LocationService getLocationService(){
@@ -57,6 +61,10 @@ public class DataService extends Service implements LocationService.ILocationLis
      */
     public double getWeatherFactor(){
         return wGrabber.getData();
+    }
+
+    public String getWeatherDescription(){
+        return wGrabber.getDescription();
     }
 
     /**
