@@ -47,6 +47,7 @@ public class AlarmEvent extends BroadcastReceiver {
 
         KeyguardManager km = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
         final KeyguardManager.KeyguardLock kl=km.newKeyguardLock("My_App");
+
         kl.disableKeyguard();
 
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);

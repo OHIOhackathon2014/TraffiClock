@@ -22,6 +22,7 @@ import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
 import com.mobile.android.trafficlock.datagrabber.TrafficGrabber;
 import com.mobile.android.trafficlock.datagrabber.WeatherGrabber;
+import com.mobile.android.trafficlock.utils.AlarmService;
 import com.mobile.android.trafficlock.utils.SetAlarm;
 import com.mobile.android.trafficlock.utils.Utils;
 
@@ -39,8 +40,8 @@ public class MainActivity extends Activity implements WeatherGrabber.WeatherList
 
         Intent dataServiceIntent = new Intent(this, DataService.class);
         startService(dataServiceIntent);
-        TrafficGrabber.setTrafficListener(this);
-        WeatherGrabber.setWeatherListener(this);
+        TrafficGrabber.addTrafficLIstener(this);
+        WeatherGrabber.addWeatherListener(this);
 
         ActionBar actionBar = getActionBar();
 
@@ -113,6 +114,10 @@ public class MainActivity extends Activity implements WeatherGrabber.WeatherList
 
                 SetAlarm.setAlarm(getApplicationContext());
 
+
+                //start -> activated; stop? -> deactivated
+                Intent alarmServiceIntent = new Intent(getApplicationContext(), AlarmService.class);
+                startService(alarmServiceIntent);
 
 
 

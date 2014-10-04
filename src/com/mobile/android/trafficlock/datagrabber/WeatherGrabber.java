@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -42,7 +43,7 @@ public class WeatherGrabber implements DataGrabber {
 
     private Location location;
 
-    private static WeatherListener listener;
+    private static List<WeatherListener> listeners = new ArrayList<WeatherListener>();
 
     public WeatherGrabber(Context context){
         this.context = context;
@@ -134,19 +135,21 @@ public class WeatherGrabber implements DataGrabber {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        if(listener != null){
-            listener.weatherFactorUpdated(weatherData);
-            listener.weatherDescriptionUpdated(description);
+        for(WeatherListener listener : listeners) {
+            if (listener != null) {
+                listener.weatherFactorUpdated(weatherData);
+                listener.weatherDescriptionUpdated(description);
+            }
         }
 
     }
 
-    public static void setWeatherListener(WeatherListener l){
-        listener = l;
+    public static void addWeatherListener(WeatherListener l){
+        listeners.add(l);
     }
 
-    public static void removeWeatherListener(){
-        listener = null;
+    public static void removeWeatherListener(WeatherListener listener){
+        listeners.remove(listener);
     }
 
 

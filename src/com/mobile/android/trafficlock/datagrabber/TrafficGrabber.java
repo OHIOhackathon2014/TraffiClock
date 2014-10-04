@@ -37,6 +37,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -57,12 +58,12 @@ public class TrafficGrabber implements DataGrabber{
     private Context context;
     private double trafficData = -1;
 
-    private static TrafficListener listener;
+    private static List<TrafficListener> listeners = new ArrayList<TrafficListener>();
 
     private String destinationAddress;
     private Location destinationLocation;
     private Location location;
-
+;
     public TrafficGrabber(Context context){
         this.context = context;
 
@@ -78,7 +79,9 @@ public class TrafficGrabber implements DataGrabber{
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
                 if(s.equals("prefDestination")){
                     timer.schedule(new DataTimerTask(), 0);
-                    listener.trafficUpdated("Calculating...");
+                    for(TrafficListener listener : listeners) {
+                        listener.trafficUpdated("Calculating...");
+                    }
                 }
             }
         });
@@ -126,19 +129,20 @@ public class TrafficGrabber implements DataGrabber{
         }catch(Exception e){
             e.printStackTrace();
         }
-        Log.e("ohio", "listener: " + listener);
-        if(listener != null){
-            listener.trafficUpdated(trafficData);
+        for(TrafficListener listener : listeners) {
+            if (listener != null) {
+                listener.trafficUpdated(trafficData);
+            }
         }
 
     }
 
-    public static void setTrafficListener(TrafficListener l){
-        listener = l;
+    public static void addTrafficLIstener(TrafficListener l){
+        listeners.add(l);
     }
 
-    public static void removeTrafficListener(){
-        listener = null;
+    public static void removeTrafficListener(TrafficListener listener) {
+        listeners.remove(listener);
     }
 
     public interface TrafficListener {

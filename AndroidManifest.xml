@@ -36,7 +36,7 @@
                 android:name=".datagrabber.DataService">
         </service>
 
-        <service android:name=".utils.AlarmEventDispatcher"></service>
+        <service android:name=".utils.AlarmService"></service>
         <receiver android:name=".utils.AlarmEvent"></receiver>
 
     </application>
