@@ -28,6 +28,12 @@
                 android:summary="Latest Possible Wake-up Time"
                 android:title="Latest Wake Up Time" >
         </com.mobile.android.trafficlock.TimePreference>
+        <com.mobile.android.trafficlock.TimePreference
+                android:key="workStartTime"
+                android:dialogLayout="@layout/time_picker"
+                android:summary="The Time You Start Work"
+                android:title="Work Start Time" >
+        </com.mobile.android.trafficlock.TimePreference>
         <com.mobile.android.trafficlock.VolumePreference
                 android:key="alarmVolume"
                 android:dialogLayout="@layout/seek_bar_picker"
