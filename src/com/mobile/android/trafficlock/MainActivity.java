@@ -66,10 +66,8 @@ public class MainActivity extends Activity {
                     public void onClick(View v) {
                         if (!sharedPreferences.getString("prefDestination", "").equals("")) {
                             Location location = Utils.geocode(sharedPreferences.getString("prefDestination", ""));
-                            double lat = location.getLatitude();
-                            double lon = location.getLongitude();
                             Intent map = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/" +
-                                    "maps?daddr=" + lat + "," + lon));
+                                    "maps?daddr=" + location.getLatitude() + "," + location.getLongitude()));
                             startActivity(map);
                         } else {
                             Toast.makeText(getBaseContext(), "Please enter an address in preferences.", Toast.LENGTH_SHORT).show();

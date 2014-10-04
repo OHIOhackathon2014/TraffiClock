@@ -42,9 +42,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c255cb98-e511-4c7f-90a4-780cab61b713" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TraffiClock.iml" afterPath="$PROJECT_DIR$/TraffiClock.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TraffiClock.iws" />
@@ -111,15 +108,15 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61220825" vertical-offset="544" max-vertical-offset="1710">
-              <caret line="74" column="77" selection-start-line="74" selection-start-column="77" selection-end-line="74" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.6563193" vertical-offset="484" max-vertical-offset="1680">
+              <caret line="67" column="114" selection-start-line="67" selection-start-column="114" selection-end-line="67" selection-end-column="114" />
               <folding>
                 <element signature="e#2050#2548#0" expanded="true" />
                 <element signature="e#2529#2530#0" expanded="true" />
-                <element signature="e#2643#3567#0" expanded="true" />
-                <element signature="e#3548#3549#0" expanded="true" />
-                <element signature="e#4298#5648#0" expanded="true" />
-                <element signature="e#5637#5638#0" expanded="true" />
+                <element signature="e#2643#3475#0" expanded="true" />
+                <element signature="e#3456#3457#0" expanded="true" />
+                <element signature="e#4206#5556#0" expanded="true" />
+                <element signature="e#5545#5546#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -557,8 +554,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18716578" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18716578" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -606,10 +603,10 @@
           <folding>
             <element signature="e#2050#2548#0" expanded="true" />
             <element signature="e#2529#2530#0" expanded="true" />
-            <element signature="e#2643#3567#0" expanded="true" />
-            <element signature="e#3548#3549#0" expanded="true" />
-            <element signature="e#4298#5648#0" expanded="true" />
-            <element signature="e#5637#5638#0" expanded="true" />
+            <element signature="e#2643#3475#0" expanded="true" />
+            <element signature="e#3456#3457#0" expanded="true" />
+            <element signature="e#4206#5556#0" expanded="true" />
+            <element signature="e#5545#5546#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -775,15 +772,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61220825" vertical-offset="544" max-vertical-offset="1710">
-          <caret line="74" column="77" selection-start-line="74" selection-start-column="77" selection-end-line="74" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.6563193" vertical-offset="484" max-vertical-offset="1680">
+          <caret line="67" column="114" selection-start-line="67" selection-start-column="114" selection-end-line="67" selection-end-column="114" />
           <folding>
             <element signature="e#2050#2548#0" expanded="true" />
             <element signature="e#2529#2530#0" expanded="true" />
-            <element signature="e#2643#3567#0" expanded="true" />
-            <element signature="e#3548#3549#0" expanded="true" />
-            <element signature="e#4298#5648#0" expanded="true" />
-            <element signature="e#5637#5638#0" expanded="true" />
+            <element signature="e#2643#3475#0" expanded="true" />
+            <element signature="e#3456#3457#0" expanded="true" />
+            <element signature="e#4206#5556#0" expanded="true" />
+            <element signature="e#5545#5546#0" expanded="true" />
           </folding>
         </state>
       </provider>
