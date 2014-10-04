@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.PowerManager;
 import android.view.Window;
 import android.view.WindowManager;
+import com.mobile.android.trafficlock.DialogActivity;
 
 /**
  * Created by michael on 10/4/14.
@@ -63,16 +64,10 @@ public class AlarmEvent extends BroadcastReceiver {
 //        AlertDialog ad=ad_b.create();
 //        ad.show();
 
-        AlertDialog.Builder customBuilder = new AlertDialog.Builder(context);
-        customBuilder.setMessage("Fuck yo shit");
-        customBuilder.setPositiveButton("lololol",new DialogInterface.OnClickListener(){
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        customBuilder.setCancelable(false);
-        customBuilder.show();
+
+        Intent dialog = new Intent(context, DialogActivity.class);
+        dialog.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(dialog);
 
         wl.release();
     }
