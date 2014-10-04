@@ -88,5 +88,6 @@ public class DataService extends Service implements LocationService.ILocationLis
     @Override
     public void onLocationChanged(Location location) {
         tGrabber.updateLocation(location);
+        wGrabber.updateLocation(location);
     }
 }

@@ -23,12 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/precipitation.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/res/values/precipitation.txt" afterPath="$PROJECT_DIR$/assets/precipitation.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/TimePreference.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/TimePreference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/TrafficGrabber.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/TrafficGrabber.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -38,8 +35,8 @@
     <file path="/fragment.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412416964945" ignored="false" />
     <file path="/SettingsActivity.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412417655100" ignored="false" />
     <file path="/MainActivity.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412430483986" ignored="false" />
-    <file path="/DataService.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412430430766" ignored="false" />
-    <file path="/WeatherGrabber.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412428625541" ignored="false" />
+    <file path="/DataService.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412437703495" ignored="false" />
+    <file path="/WeatherGrabber.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412439146793" ignored="false" />
     <file path="/TrafficGrabber.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412430436679" ignored="false" />
     <file path="/TimePreference.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412429384243" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -125,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataService.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DataService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="25" selection-start="941" selection-end="941" vertical-scroll-proportion="-0.030805686">
+            <state line="90" column="42" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,7 +134,7 @@
       <file leaf-file-name="TrafficGrabber.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/TrafficGrabber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="24" selection-start="2941" selection-end="2941" vertical-scroll-proportion="0.0">
+            <state line="110" column="3" selection-start="3373" selection-end="3542" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#2514#2907#0" expanded="true" />
                 <element signature="e#2896#2897#0" expanded="true" />
@@ -146,10 +143,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeatherGrabber.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WeatherGrabber.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="28" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+            <state line="132" column="38" selection-start="4182" selection-end="4182" vertical-scroll-proportion="0.66494846">
               <folding />
             </state>
           </provider>
@@ -158,7 +155,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="79" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
+            <state line="9" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -184,11 +181,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/TimePreference.java" />
-        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java" />
-        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/TrafficGrabber.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" />
+        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java" />
       </list>
     </option>
   </component>
@@ -355,6 +352,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TraffiClock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackOHIO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -373,6 +384,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/res/values" />
     </key>
   </component>
@@ -532,12 +544,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38108107" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3918919" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17567568" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6081081" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.8243243" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43513513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -651,20 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="28" selection-start="926" selection-end="926" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/TrafficGrabber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="24" selection-start="2941" selection-end="2941" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2514#2907#0" expanded="true" />
-            <element signature="e#2896#2897#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,16 +692,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="79" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
+        <state line="90" column="42" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/TrafficGrabber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="25" selection-start="941" selection-end="941" vertical-scroll-proportion="-0.030805686">
+        <state line="110" column="3" selection-start="3373" selection-end="3542" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2514#2907#0" expanded="true" />
+            <element signature="e#2896#2897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="38" selection-start="4182" selection-end="4182" vertical-scroll-proportion="0.66494846">
           <folding />
         </state>
       </provider>

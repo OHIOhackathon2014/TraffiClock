@@ -1,7 +1,9 @@
 package com.mobile.android.trafficlock.datagrabber;
 
 import android.content.Context;
+import android.location.Location;
 import android.os.AsyncTask;
+import android.util.Log;
 import com.mobile.android.trafficlock.utils.Utils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -11,8 +13,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -33,19 +38,48 @@ public class WeatherGrabber implements DataGrabber {
     private Context context;
     private double weatherData = -1;
     private String description = "No weather data available";
+    private ArrayList<double[]> precips = new ArrayList<double[]>();
+
+    private Location location;
 
     private static WeatherListener listener;
 
     public WeatherGrabber(Context context){
         this.context = context;
+        if(location == null){
+            location = Utils.getLastLocation();
+        }
         timer = new Timer();
         timer.scheduleAtFixedRate(new DataTimerTask(), 0, TIME_INTERVAL);
         timer.schedule(new DataTimerTask(), 0);
+        try{
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(context.getAssets().open("precipitation.txt")));
+            String line;
+            while((line = reader.readLine()) != null && !line.trim().isEmpty()){
+                String[] strs = line.split(",");
+                double[] city = new double[strs.length];
+                for(int i = 0; i < strs.length; i++){
+                    city[i] = Double.parseDouble(strs[i]);
+                }
+                precips.add(city);
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void destroy(){
         timer.cancel();
         timer.purge();
+    }
+
+    public void updateLocation(Location loc){
+        if(location == null){
+            timer.schedule(new DataTimerTask(), 0);
+        }
+        this.location = loc;
     }
 
     @Override
@@ -62,18 +96,41 @@ public class WeatherGrabber implements DataGrabber {
         return description;
     }
 
+    private double getClosestPrecip(){
+        final int CLOSEST_SIZE = 5;
+        double[] closest = precips.get(0);
+        double closestDist = Integer.MAX_VALUE;
+        double lat = location.getLatitude();
+        double lon = location.getLongitude();
+        for(double[] db : precips){
+            double distSq = (db[0] - lat) * (db[0] - lat) + (db[1] - lon) * (db[1] - lon);
+            if(distSq < closestDist){
+                closest = db;
+                closestDist = distSq;
+            }
+        }
+        Calendar cal = Calendar.getInstance();
+        int month = cal.get(Calendar.MONTH);
+        return closest[month + 2];
+    }
+
     private void processWeatherData(JSONObject weather){
         if(weather == null)
             return;
         try {
             JSONObject now = weather.getJSONObject("data").getJSONArray("current_condition").getJSONObject(0);
             double precip = now.getDouble("precipMM");
+            double closestAvgPrecip = getClosestPrecip();
             description = now.getInt("temp_F") + " F, " + now.getJSONArray("weatherDesc")
                         .getJSONObject(0).getString("value");
-            weatherData = precip / MAX_PRECIP;
-            if(weatherData > 1){
-                weatherData = 1;
+            double diff = precip - closestAvgPrecip;
+            double errFromMean = diff / closestAvgPrecip;
+            if(errFromMean > 1){
+                errFromMean = 1;
             }
+            errFromMean /= 2;
+            errFromMean += .5;
+            weatherData = errFromMean;
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -105,7 +162,7 @@ public class WeatherGrabber implements DataGrabber {
 
         @Override
         public void run() {
-            if(Utils.isConnected(context)){
+            if(Utils.isConnected(context) && location != null){
                 WeatherTask task = new WeatherTask();
                 task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, (Void[])null);
             }
@@ -121,7 +178,8 @@ public class WeatherGrabber implements DataGrabber {
             try{
                 HttpClient client = new DefaultHttpClient();
                 HttpGet get = new HttpGet(BASE_URL +
-                        "/weather.ashx?q=columbus&format=json&key=3d241f00c0201d81de9d7be9a82a6c69b0b76d68");
+                        "/weather.ashx?q=" + location.getLatitude() + "," +
+                        location.getLongitude() + "&format=json&key=3d241f00c0201d81de9d7be9a82a6c69b0b76d68");
                 HttpResponse response = client.execute(get);
                 BufferedReader br = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
                 StringBuilder sb = new StringBuilder();
