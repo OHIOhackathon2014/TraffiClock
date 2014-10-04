@@ -6,15 +6,24 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Button;
+import android.widget.Toast;
 import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
+import com.mobile.android.trafficlock.datagrabber.WeatherGrabber;
+import com.mobile.android.trafficlock.utils.Utils;
 
 public class MainActivity extends Activity {
+
+
+    private Location destinationLocation;
+
     /**
      * Called when the activity is first created.
      */
@@ -61,7 +70,14 @@ public class MainActivity extends Activity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //Intent map = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?daddr=20.5666,45.345"));
+                        if (destinationLocation != null && destinationLocation.getLatitude() != 0 &&
+                                        destinationLocation.getLongitude() != 0) {
+                            Intent map = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/" +
+                                    "maps?daddr=" + destinationLocation.getLatitude() + "," + destinationLocation.getLongitude()));
+                            startActivity(map);
+                        } else {
+                            Toast.makeText(getBaseContext(), "Please enter an address in settings.", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
 
@@ -106,6 +122,38 @@ public class MainActivity extends Activity {
                 }
             }
         });
+
+        SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(this);
+        p.registerOnSharedPreferenceChangeListener(new SharedPreferences.OnSharedPreferenceChangeListener() {
+            @Override
+            public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+                if(s.equals("prefDestination")){
+                    String dest = sharedPreferences.getString(s, "");
+                    GeocodeTask geocodeTask = new GeocodeTask();
+                    geocodeTask.execute(dest);
+                }
+            }
+        });
+        if(!p.getString("prefDestination", "").equals("")){
+            String dest = sharedPreferences.getString("prefDestination", "");
+            GeocodeTask geocodeTask = new GeocodeTask();
+            geocodeTask.execute(dest);
+        }
     }
 
+    private class GeocodeTask extends AsyncTask<String, Void, Location> {
+
+
+        @Override
+        protected Location doInBackground(String ... dests) {
+            String dest = dests[0];
+            Location loc = Utils.geocode(dest);
+            return loc;
+        }
+
+        @Override
+        protected void onPostExecute(Location loc){
+            destinationLocation = loc;
+        }
+    }
 }
