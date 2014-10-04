@@ -9,13 +9,17 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.mobile.android.trafficlock.datagrabber.DataService;
@@ -94,8 +98,8 @@ public class MainActivity extends Activity implements WeatherGrabber.WeatherList
         setContentView(R.layout.main);
 
         final Button activateButton = (Button) findViewById(R.id.activationButton);
-        ObjectAnimator scaleXAnim = ObjectAnimator.ofFloat(activateButton, "scaleX", 1.0f, 1.05f);
-        ObjectAnimator scaleYAnim = ObjectAnimator.ofFloat(activateButton, "scaleY", 1.0f, 1.05f);
+        ObjectAnimator scaleXAnim = ObjectAnimator.ofFloat(activateButton, "scaleX", .99f, 1.04f);
+        ObjectAnimator scaleYAnim = ObjectAnimator.ofFloat(activateButton, "scaleY", .99f, 1.04f);
         scaleXAnim.setRepeatMode(ValueAnimator.REVERSE);
         scaleYAnim.setRepeatMode(ValueAnimator.REVERSE);
         scaleXAnim.setRepeatCount(ValueAnimator.INFINITE);
@@ -105,6 +109,31 @@ public class MainActivity extends Activity implements WeatherGrabber.WeatherList
         scaleXAnim.start();
         scaleYAnim.start();
 
+        String[] colors = {"#ffffffff", "#ffdddddd", "#ffcccccc", "#ffbbbbbb", "#ffaaaaaa",
+                "#ff999999", "#ff888888", "#ff777777", "#ff666666", "#ff555555",};
+        int[] resids = {R.id.orbiting_circle, R.id.orbiting_circle2, R.id.orbiting_circle3, R.id.orbiting_circle4,
+                R.id.orbiting_circle5, R.id.orbiting_circle6, R.id.orbiting_circle7, R.id.orbiting_circle8,
+                R.id.orbiting_circle9, R.id.orbiting_circle10};
+        float ANGLE_SPREAD = (float) (Math.PI * 2 / 5);
+        float NUM_CIRCLES = 10;
+        for(int i = 0; i < NUM_CIRCLES; i++){
+            ImageView img = (ImageView) findViewById(resids[i]);
+            img.setBackgroundColor(Color.parseColor(colors[i]));
+            final float MAX_SIZE = 1.0f, MIN_SIZE = .1f;
+            float scaleFactor = ((MAX_SIZE - MIN_SIZE) / (-NUM_CIRCLES + 1)) * i + 1;
+            img.setScaleX(scaleFactor);
+            img.setScaleY(scaleFactor);
+            OrbitingCircle orbiting = new OrbitingCircle(img, activateButton);
+
+            float startAngle = i * ANGLE_SPREAD / NUM_CIRCLES;
+                    ObjectAnimator angleAnimator = ObjectAnimator.ofFloat(orbiting, "angle",
+                            (float) (Math.PI * 2 + startAngle), startAngle);
+            angleAnimator.setRepeatMode(ValueAnimator.RESTART);
+            angleAnimator.setRepeatCount(ValueAnimator.INFINITE);
+            angleAnimator.setInterpolator(new LinearInterpolator());
+            angleAnimator.setDuration(3000);
+            angleAnimator.start();
+        }
 
 
         activateButton.setOnClickListener(new View.OnClickListener() {
