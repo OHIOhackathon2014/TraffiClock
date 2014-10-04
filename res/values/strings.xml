@@ -3,6 +3,8 @@
     <string name="app_name">TraffiClock</string>
     <string name="map">Map</string>
     <string name="settings">Settings</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
     <style name="ButtonText">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>

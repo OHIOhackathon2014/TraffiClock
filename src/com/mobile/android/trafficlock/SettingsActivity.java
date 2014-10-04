@@ -2,11 +2,12 @@ package com.mobile.android.trafficlock;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class MainActivity extends Activity {
+public class SettingsActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
@@ -23,7 +24,7 @@ public class MainActivity extends Activity {
         LayoutInflater inflater = (LayoutInflater) getActionBar().getThemedContext()
                 .getSystemService(LAYOUT_INFLATER_SERVICE);
         final View customActionBarView = inflater.inflate(
-                R.layout.actionbar_main_page, null);
+                R.layout.actionbar_settings_page, null);
 
         actionBar.setCustomView(customActionBarView,
                 new ActionBar.LayoutParams(
@@ -32,17 +33,8 @@ public class MainActivity extends Activity {
                 )
         );
 
-        customActionBarView.findViewById(R.id.actionbar_settings).setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent settings = new Intent(getApplicationContext(), SettingsActivity.class);
-                        settings.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        getApplicationContext().startActivity(settings);
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                    }
-                });
-
         setContentView(R.layout.main);
+
+
     }
 }
