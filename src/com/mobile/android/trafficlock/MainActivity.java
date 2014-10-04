@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
+import com.mobile.android.trafficlock.datagrabber.WeatherGrabber;
 import com.mobile.android.trafficlock.utils.Utils;
 
 public class MainActivity extends Activity {
@@ -117,5 +118,4 @@ public class MainActivity extends Activity {
             }
         });
     }
-
 }
