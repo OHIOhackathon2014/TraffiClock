@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
                                     "maps?daddr=" + location.getLatitude() + "," + location.getLongitude()));
                             startActivity(map);
                         } else {
-                            Toast.makeText(getBaseContext(), "Please enter an address in preferences.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getBaseContext(), "Please enter an address in settings.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
