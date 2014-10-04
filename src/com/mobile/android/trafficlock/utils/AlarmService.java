@@ -4,7 +4,7 @@ import android.app.IntentService;
 import android.content.Intent;
 
 /**
- * Created by michael on 10/4/14.
+ * Created by Michael Abbott on 10/4/14.
  */
 public class AlarmService extends IntentService {
 
