@@ -24,17 +24,17 @@ public class MainActivity extends Activity {
                         | ActionBar.DISPLAY_SHOW_TITLE);
         LayoutInflater inflater = (LayoutInflater) getActionBar().getThemedContext()
                 .getSystemService(LAYOUT_INFLATER_SERVICE);
-        final View customActionBarView = inflater.inflate(
+        final View actionBarView = inflater.inflate(
                 R.layout.actionbar_main_page, null);
 
-        actionBar.setCustomView(customActionBarView,
+        actionBar.setCustomView(actionBarView,
                 new ActionBar.LayoutParams(
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.MATCH_PARENT
                 )
         );
 
-        customActionBarView.findViewById(R.id.actionbar_settings).setOnClickListener(
+        actionBarView.findViewById(R.id.actionbar_settings).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -47,6 +47,4 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.main);
     }
-
-
 }

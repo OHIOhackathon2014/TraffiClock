@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <PreferenceCategory android:title="Settings" >
+        <CheckBoxPreference
+                android:defaultValue="true"
+                android:title="Weather"
+                android:summary="Incorporate Weather"
+                android:key="prefUseWeather"/>
+        <EditTextPreference
+                android:title="Address"
+                android:summary="Destination Address"
+                android:key="prefDestination"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Alarm Settings" >
+        <com.mobile.android.trafficlock.NumberPreference
+                android:key="readyTime"
+                android:dialogLayout="@layout/number_picker"
+                android:summary="Minutes Needed to be Ready in the Morning"
+                android:title="Ready Time" >
+        </com.mobile.android.trafficlock.NumberPreference>
+        <com.mobile.android.trafficlock.TimePreference
+                android:key="latestWakeUpTime"
+                android:dialogLayout="@layout/time_picker"
+                android:summary="Latest Possible Wake-up Time"
+                android:title="Latest Wake Up Time" >
+        </com.mobile.android.trafficlock.TimePreference>
+        <com.mobile.android.trafficlock.VolumePreference
+                android:key="alarmVolume"
+                android:dialogLayout="@layout/seek_bar_picker"
+                android:summary="Alarm Volume"
+                android:title="Alarm Volume" >
+        </com.mobile.android.trafficlock.VolumePreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>
