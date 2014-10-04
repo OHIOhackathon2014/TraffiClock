@@ -9,51 +9,32 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" >
         <!--android:background="@drawable/radial_gradient"-->
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                      android:id="@+id/buttons"
-                      android:layout_width="fill_parent"
-                      android:layout_marginTop="15dp"
-                      android:layout_height="wrap_content"
-                      android:layout_marginLeft="37dp"
-                      android:layout_marginRight="37dp"
-                      android:orientation="horizontal">
-            <Button android:text="Reset"
-                    android:id="@+id/resetAddServer"
-                    android:textSize="20dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:layout_marginRight="2.5dp"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/red_button"
-                    style="@style/ButtonText"
-                    android:layout_weight="1"
-                    />
-            <Button android:text="QR Code"
-                    android:id="@+id/qrCode"
-                    android:textSize="20dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:layout_marginLeft="2.5dp"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/yellow_button"
-                    style="@style/ButtonText"
-                    android:layout_weight="1"
-                    />
-        </LinearLayout>
-        <ImageView
-                android:id="@+id/qrCodeImage"
+        <Button android:text="@string/activated"
+                android:id="@+id/activationButton"
+                android:textSize="35dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="60dp"
-                android:layout_marginBottom="20dp"
-                android:layout_below="@id/buttons"
-                android:contentDescription="QR Code"
-                android:layout_width="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/green_button"
+                style="@style/ButtonText" />
+        <TextView
+                android:id="@+id/currWeatherTitle"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:padding="7dp"
-                android:background="@drawable/all_round_edittext"
-                />
+                android:layout_below="@id/activationButton"
+                android:textSize="22sp"
+                android:text="@string/currWeather"/>
+        <TextView
+                android:id="@+id/currWeatherValue"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="35dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currWeatherTitle"
+                android:textSize="18sp"
+                android:text="@string/defaultWeather"/>
     </RelativeLayout>
 </ScrollView>
