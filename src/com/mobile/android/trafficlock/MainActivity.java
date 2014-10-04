@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         startService(dataServiceIntent);
         ActionBar actionBar = getActionBar();
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         final SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putBoolean("activated", false);
@@ -55,12 +55,21 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.main);
 
-        Button activationButton = (Button) findViewById(R.id.activationButton);
+        final Button activateButton = (Button) findViewById(R.id.activationButton);
 
-        activationButton.setOnClickListener(new View.OnClickListener() {
+        activateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // The service is not activated
+                if (!sharedPreferences.getBoolean("activated", false)) {
+                    activateButton.setBackground(getDrawable(R.drawable.red_button));
+                    editor.putBoolean("activated", true).commit();
+                }
+                // The service is activated
+                else {
+                    activateButton.setBackground(getDrawable(R.drawable.green_button));
+                    editor.putBoolean("activated", false).commit();
+                }
             }
         });
     }
