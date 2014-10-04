@@ -208,7 +208,7 @@ public class MainActivity extends Activity implements WeatherGrabber.WeatherList
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    trafficValueText.setText(hoursText + minutes + " min(s) to destination!");
+                    trafficValueText.setText(hoursText + minutes + " mins to destination!");
                 }
             });
         }

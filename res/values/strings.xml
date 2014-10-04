@@ -12,6 +12,9 @@
     <string name="defaultWeather">No Weather Available</string>
     <string name="currTraffic">Current Traffic:</string>
     <string name="defaultTraffic">No Traffic Available</string>
+    <string name="alarmNotificationTitle">TraffiClock Alarm</string>
+    <string name="wakeUpMessage">Time to Get Up!</string>
+    <string name="dismiss">Dismiss</string>
     <style name="ButtonText">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
