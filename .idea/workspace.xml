@@ -14,7 +14,12 @@
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
       <GlobalState>
+        <option name="device" value="2.7in QVGA" />
+        <option name="dockMode" value="" />
+        <option name="nightMode" value="notnight" />
+        <option name="targetHashString" value="android-20" />
         <option name="theme" value="Theme" />
+        <option name="visible" value="false" />
       </GlobalState>
     </option>
   </component>
@@ -23,22 +28,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/values/precipitation.txt" afterPath="$PROJECT_DIR$/assets/precipitation.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/OrbitingCircle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/orbiting_circle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TraffiClock.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412416844594" ignored="false" />
-    <file path="/fragment.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412416964945" ignored="false" />
+    <file path="/fragment.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412457644452" ignored="false" />
     <file path="/SettingsActivity.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412417655100" ignored="false" />
-    <file path="/MainActivity.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412430483986" ignored="false" />
+    <file path="/MainActivity.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412460055302" ignored="false" />
     <file path="/DataService.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412437703495" ignored="false" />
     <file path="/WeatherGrabber.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412439146793" ignored="false" />
     <file path="/TrafficGrabber.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412430436679" ignored="false" />
     <file path="/TimePreference.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412429384243" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/mobile/android/trafficlock/BuildConfig.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412455566449" ignored="false" />
+    <file path="/main.xml" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412456792803" ignored="false" />
+    <file path="/orbiting_circle.xml" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412455838031" ignored="false" />
+    <file path="/OrbitingCircle.java" changelist="afa1d2e2-9d6e-40ab-a4f9-4be04b9d3db3" time="1412457841251" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,64 +107,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="0" selection-start="7058" selection-end="7058" vertical-scroll-proportion="0.0">
+            <state line="112" column="31" selection-start="5009" selection-end="5009" vertical-scroll-proportion="0.806701">
               <folding>
-                <element signature="e#2462#2960#0" expanded="true" />
-                <element signature="e#2941#2942#0" expanded="true" />
-                <element signature="e#3055#3881#0" expanded="true" />
-                <element signature="e#3862#3863#0" expanded="true" />
-                <element signature="e#4614#5964#0" expanded="true" />
-                <element signature="e#5953#5954#0" expanded="true" />
-                <element signature="e#6102#6554#0" expanded="true" />
-                <element signature="e#6543#6544#0" expanded="true" />
-                <element signature="e#7454#7660#0" expanded="true" />
-                <element signature="e#7645#7646#0" expanded="true" />
-                <element signature="e#7770#8007#0" expanded="true" />
-                <element signature="e#7996#7997#0" expanded="true" />
-                <element signature="e#8284#8525#0" expanded="true" />
-                <element signature="e#8514#8515#0" expanded="true" />
+                <element signature="e#2778#3276#0" expanded="true" />
+                <element signature="e#3257#3258#0" expanded="true" />
+                <element signature="e#3371#4197#0" expanded="true" />
+                <element signature="e#4178#4179#0" expanded="true" />
+                <element signature="e#6481#7897#0" expanded="true" />
+                <element signature="e#7886#7887#0" expanded="true" />
+                <element signature="e#8035#8487#0" expanded="true" />
+                <element signature="e#8476#8477#0" expanded="true" />
+                <element signature="e#9385#9590#0" expanded="true" />
+                <element signature="e#9575#9576#0" expanded="true" />
+                <element signature="e#9700#9937#0" expanded="true" />
+                <element signature="e#9926#9927#0" expanded="true" />
+                <element signature="e#10214#10455#0" expanded="true" />
+                <element signature="e#10444#10445#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java">
+      <file leaf-file-name="OrbitingCircle.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/OrbitingCircle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="42" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrafficGrabber.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/TrafficGrabber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="3" selection-start="3373" selection-end="3542" vertical-scroll-proportion="0.0">
+            <state line="20" column="29" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2514#2907#0" expanded="true" />
-                <element signature="e#2896#2897#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeatherGrabber.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java">
+      <file leaf-file-name="orbiting_circle.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable/orbiting_circle.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="38" selection-start="4182" selection-end="4182" vertical-scroll-proportion="0.66494846">
+            <state line="5" column="36" selection-start="182" selection-end="182" vertical-scroll-proportion="-3.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
+            <state line="50" column="52" selection-start="2640" selection-end="2640" vertical-scroll-proportion="-3.25">
               <folding />
             </state>
           </provider>
@@ -182,17 +184,24 @@
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/TimePreference.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/TrafficGrabber.java" />
-        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java" />
         <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java" />
+        <option value="$PROJECT_DIR$/res/drawable/red_button.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/green_button.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/OrbitingCircle.java" />
+        <option value="$PROJECT_DIR$/res/drawable/orbiting_circle3.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/orbiting_circle2.xml" />
+        <option value="$PROJECT_DIR$/res/drawable/orbiting_circle.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="31" />
+    <option name="y" value="22" />
     <option name="width" value="1390" />
-    <option name="height" value="860" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -290,28 +299,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trafficlock" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="datagrabber" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TraffiClock" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HackOHIO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -351,6 +338,100 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TraffiClock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackOHIO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TraffiClock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackOHIO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-mdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TraffiClock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackOHIO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-ldpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TraffiClock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackOHIO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TraffiClock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackOHIO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -383,6 +464,9 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/drawable" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/res/values" />
@@ -393,6 +477,24 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -529,28 +631,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="31" width="1390" height="860" extended-state="0" />
+    <frame x="0" y="22" width="1390" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296131" sideWeight="0.7797297" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296131" sideWeight="0.7797297" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296131" sideWeight="0.7797297" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296131" sideWeight="0.5659631" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38108107" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17567568" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35224274" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53957784" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.8243243" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43513513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5659631" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43403694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -623,78 +725,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.53797466">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/preferences.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/TimePreference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="76" selection-start="844" selection-end="844" vertical-scroll-proportion="0.72192514">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="59" selection-start="2127" selection-end="2127" vertical-scroll-proportion="1.3554503">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="58" selection-start="440" selection-end="440" vertical-scroll-proportion="0.1421801">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="0" selection-start="7058" selection-end="7058" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2462#2960#0" expanded="true" />
-            <element signature="e#2941#2942#0" expanded="true" />
-            <element signature="e#3055#3881#0" expanded="true" />
-            <element signature="e#3862#3863#0" expanded="true" />
-            <element signature="e#4614#5964#0" expanded="true" />
-            <element signature="e#5953#5954#0" expanded="true" />
-            <element signature="e#6102#6554#0" expanded="true" />
-            <element signature="e#6543#6544#0" expanded="true" />
-            <element signature="e#7454#7660#0" expanded="true" />
-            <element signature="e#7645#7646#0" expanded="true" />
-            <element signature="e#7770#8007#0" expanded="true" />
-            <element signature="e#7996#7997#0" expanded="true" />
-            <element signature="e#8284#8525#0" expanded="true" />
-            <element signature="e#8514#8515#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="42" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
+        <state line="179" column="52" selection-start="5469" selection-end="5469" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -709,10 +749,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/WeatherGrabber.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/datagrabber/DataService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="38" selection-start="4182" selection-end="4182" vertical-scroll-proportion="0.66494846">
+        <state line="90" column="42" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/utils/SetAlarm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/radial_gradient.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/red_button.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="12" selection-start="1033" selection-end="1206" vertical-scroll-proportion="0.92021275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/green_button.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="20" selection-start="1051" selection-end="1216" vertical-scroll-proportion="0.9175532">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/OrbitingCircle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/orbiting_circle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="36" selection-start="182" selection-end="182" vertical-scroll-proportion="-3.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="52" selection-start="2640" selection-end="2640" vertical-scroll-proportion="-3.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobile/android/trafficlock/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="31" selection-start="5009" selection-end="5009" vertical-scroll-proportion="0.806701">
+          <folding>
+            <element signature="e#2778#3276#0" expanded="true" />
+            <element signature="e#3257#3258#0" expanded="true" />
+            <element signature="e#3371#4197#0" expanded="true" />
+            <element signature="e#4178#4179#0" expanded="true" />
+            <element signature="e#6481#7897#0" expanded="true" />
+            <element signature="e#7886#7887#0" expanded="true" />
+            <element signature="e#8035#8487#0" expanded="true" />
+            <element signature="e#8476#8477#0" expanded="true" />
+            <element signature="e#9385#9590#0" expanded="true" />
+            <element signature="e#9575#9576#0" expanded="true" />
+            <element signature="e#9700#9937#0" expanded="true" />
+            <element signature="e#9926#9927#0" expanded="true" />
+            <element signature="e#10214#10455#0" expanded="true" />
+            <element signature="e#10444#10445#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
