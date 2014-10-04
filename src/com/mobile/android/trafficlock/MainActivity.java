@@ -6,13 +6,16 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Button;
+import android.widget.Toast;
 import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
+import com.mobile.android.trafficlock.utils.Utils;
 
 public class MainActivity extends Activity {
     /**
@@ -61,7 +64,16 @@ public class MainActivity extends Activity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //Intent map = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?daddr=20.5666,45.345"));
+                        if (!sharedPreferences.getString("prefDestination", "").equals("")) {
+                            Location location = Utils.geocode(sharedPreferences.getString("prefDestination", ""));
+                            double lat = location.getLatitude();
+                            double lon = location.getLongitude();
+                            Intent map = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/" +
+                                    "maps?daddr=" + lat + "," + lon));
+                            startActivity(map);
+                        } else {
+                            Toast.makeText(getBaseContext(), "Please enter an address in preferences.", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
 
