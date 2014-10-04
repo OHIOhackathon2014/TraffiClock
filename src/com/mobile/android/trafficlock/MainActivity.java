@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Button;
+import android.widget.Toast;
 import com.mobile.android.trafficlock.datagrabber.DataService;
 import android.view.*;
 
@@ -69,16 +70,18 @@ public class MainActivity extends Activity {
                     else {
                         activateButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_button));
                     }
+                    activateButton.setText(getResources().getString(R.string.deactivated));
                     editor.putBoolean("activated", true).commit();
                 }
                 // The service is activated
                 else {
                     if (Build.VERSION.SDK_INT >= 16) {
-                        activateButton.setBackground(getResources().getDrawable(R.drawable.red_button));
+                        activateButton.setBackground(getResources().getDrawable(R.drawable.green_button));
                     }
                     else {
-                        activateButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.red_button));
+                        activateButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.green_button));
                     }
+                    activateButton.setText(getResources().getString(R.string.activated));
                     editor.putBoolean("activated", false).commit();
                 }
             }

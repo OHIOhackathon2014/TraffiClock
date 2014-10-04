@@ -6,8 +6,8 @@
     <string name="done">Done</string>
     <string name="cancel">Cancel</string>
     <string name="workAddress">Work Address</string>
-    <string name="activated">Activated</string>
-    <string name="deactivated">Deactivated</string>
+    <string name="activated">Activate</string>
+    <string name="deactivated">Deactivate</string>
     <style name="ButtonText">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
