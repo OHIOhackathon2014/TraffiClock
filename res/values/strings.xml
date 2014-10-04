@@ -6,6 +6,12 @@
     <string name="done">Done</string>
     <string name="cancel">Cancel</string>
     <string name="workAddress">Work Address</string>
+    <string name="activated">Activate</string>
+    <string name="deactivated">Deactivate</string>
+    <string name="currWeather">Current Weather:</string>
+    <string name="defaultWeather">No Weather Available</string>
+    <string name="currTraffic">Current Traffic:</string>
+    <string name="defaultTraffic">No Traffic Available</string>
     <style name="ButtonText">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
