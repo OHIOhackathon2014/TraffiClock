@@ -24,7 +24,7 @@ public class TimePreference extends DialogPreference {
     public void onBindDialogView(View view) {
         timePicker = (TimePicker) view.findViewById(R.id.wakeUpNoLaterThan);
         timePicker.setIs24HourView(DateFormat.is24HourFormat(getContext()));
-                timePicker.setCurrentHour(getSharedPreferences().getInt(getKey() + ".hours", startHour));
+        timePicker.setCurrentHour(getSharedPreferences().getInt(getKey() + ".hours", startHour));
         timePicker.setCurrentMinute(getSharedPreferences().getInt(getKey() + ".minutes", startMinutes));
     }
 

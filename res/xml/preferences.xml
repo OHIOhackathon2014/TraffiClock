@@ -16,6 +16,14 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Alarm Settings" >
+        <MultiSelectListPreference
+                android:dialogTitle="@string/repeat"
+                android:key="daysOfTheWeek"
+                android:summary="@string/repeatOn"
+                android:entries="@array/weekdays"
+                android:entryValues="@array/weekdays_values"
+                android:defaultValue="@array/empty_array"
+                android:title="@string/repeat" />
         <com.mobile.android.trafficlock.NumberPreference
                 android:key="readyTime"
                 android:dialogLayout="@layout/number_picker"
