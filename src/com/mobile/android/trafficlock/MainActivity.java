@@ -141,7 +141,7 @@ public class MainActivity extends Activity implements WeatherGrabber.WeatherList
             @Override
             public void onClick(View view) {
 
-                SetAlarm.setAlarm(getApplicationContext());
+                //SetAlarm.setAlarm(getApplicationContext());
 
 
                 //start -> activated; stop? -> deactivated

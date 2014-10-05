@@ -45,9 +45,7 @@ public class AlarmEvent extends BroadcastReceiver {
 //        nm.notify(0, notify);
 
 
-        KeyguardManager km = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
-        final KeyguardManager.KeyguardLock kl=km.newKeyguardLock("DialogActivity");
-        kl.disableKeyguard();
+
 
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         PowerManager.WakeLock wl=pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.FULL_WAKE_LOCK, "DialogActivity");
