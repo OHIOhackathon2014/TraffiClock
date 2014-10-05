@@ -14,6 +14,9 @@ import com.mobile.android.trafficlock.R;
  */
 public class SetAlarm {
 
+    public static boolean alertCanOccur = true;
+
+
     public static void setAlarm(Context context) {
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 

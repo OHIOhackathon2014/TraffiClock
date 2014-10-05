@@ -13,6 +13,7 @@ import android.os.PowerManager;
 import android.view.Window;
 import android.view.WindowManager;
 import com.mobile.android.trafficlock.DialogActivity;
+import com.mobile.android.trafficlock.R;
 
 /**
  * Created by michael on 10/4/14.
@@ -51,6 +52,12 @@ public class AlarmEvent extends BroadcastReceiver {
         PowerManager.WakeLock wl=pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.FULL_WAKE_LOCK, "DialogActivity");
         wl.acquire();
 
+
+
+
+        //The alert way of doing shit
+
+
 //        AlertDialog.Builder ad_b=new AlertDialog.Builder(context);
 //        ad_b.setMessage("Hi there!");
 //        ad_b.setCancelable(false);
@@ -63,10 +70,45 @@ public class AlarmEvent extends BroadcastReceiver {
 //        ad.show();
 
 
-        Intent dialog = new Intent(context, DialogActivity.class);
-        dialog.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(dialog);
+
+
+
+        //The notification way of doing shit
+
+        NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+//        Notification notify = new Notification();
+        Notification notify = new Notification.Builder(context)
+                .setTicker("Ticker Message")
+                .setContentTitle("Wake the fuck up!!1!")
+                .setContentText("Content Text")
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setDefaults(Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
+                .build();
+
+        //notify.defaults |= Notification.DEFAULT_VIBRATE;
+        //notify.defaults |= Notification.DEFAULT_ALL;
+
+//        PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+//        PowerManager.WakeLock wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
+//                "MyWakelockTag");
+//        wakeLock.acquire();
+
+        nm.notify(0, notify);
+
+
+
+
+
+
+
+//        Intent dialog = new Intent(context, DialogActivity.class);
+//        dialog.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        context.startActivity(dialog);
 
         wl.release();
+
+
+        SetAlarm.alertCanOccur = false;
     }
 }

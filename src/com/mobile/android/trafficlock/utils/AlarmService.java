@@ -49,6 +49,28 @@ public class AlarmService extends Service implements WeatherGrabber.WeatherListe
     }
 
     private void timeUntilWakeup() {
+
+        //long currentTime = System.currentTimeMillis();
+        Calendar cal = Calendar.getInstance();
+        long currentTime = cal.get(Calendar.HOUR_OF_DAY) * 60 * 60 * 1000 + cal.get(Calendar.MINUTE) * 60 * 1000 +
+                cal.get(Calendar.SECOND) * 1000 + cal.get(Calendar.MILLISECOND);
+
+
+
+//        long currentTime = System.currentTimeMillis() - (4l * 60l * 60l * 1000l);
+//        if (currentTime < 0) {
+//            currentTime += 24l * 60l * 60l * 1000l;
+//        }
+
+
+
+        if (currentTime < 3l * 60l * 1000l ) {
+            SetAlarm.alertCanOccur = true;
+        }
+
+
+        //=================================================================================
+
         int hours = sharedPreferences.getInt("workStartTime.hours", 7);
         int minutes = sharedPreferences.getInt("workStartTime.minutes", 30);
 
@@ -61,36 +83,11 @@ public class AlarmService extends Service implements WeatherGrabber.WeatherListe
 
         boolean todayIsInSet = false;
 
-//        if (values == null) {
-//            Log.e("12345", "VALUES IS NULL");
-//        }
-
-//        for (String string : values) {
-//            Log.e("12345", string);
-//        }
-
         if (values.contains(Integer.toString(day - 1))) {
-            Log.e("12345", "TRUTHE");
+            //Log.e("12345", "TRUTHE");
             todayIsInSet = true;
         }
-
-//        if (day == Calendar.SUNDAY && (values.contains("Sunday") || values.contains("sunday"))) {
-//            todayIsInSet = true;
-//        } else if (day == Calendar.MONDAY && (values.contains("Monday") || values.contains("monday"))) {
-//            todayIsInSet = true;
-//        } else if (day == Calendar.TUESDAY && (values.contains("Tuesday") || values.contains("tuesday"))) {
-//            todayIsInSet = true;
-//        } else if (day == Calendar.WEDNESDAY && (values.contains("Wednesday") || values.contains("wednesday"))) {
-//            todayIsInSet = true;
-//        } else if (day == Calendar.THURSDAY && (values.contains("Thursday") || values.contains("thursday"))) {
-//            todayIsInSet = true;
-//        } else if (day == Calendar.FRIDAY && (values.contains("Friday") || values.contains("friday"))) {
-//            todayIsInSet = true;
-//        } else if (day == Calendar.SATURDAY && (values.contains("Saturday") || values.contains("saturday"))) {
-//            Log.e("12345", "It's Saturday MotherFUcker");
-//            todayIsInSet = true;
-//        }
-        Log.e("12345", "It's NOT Saturday MotherFUcker");
+        //Log.e("12345", "It's NOT Saturday MotherFUcker");
         if (todayIsInSet) {
             //determine alarmTime from arrivalTime in following 2 if statements
             //compare or use a subtraction of alarmTime and currentTime to determine whether to "setAlarm" meaning noise
@@ -103,23 +100,48 @@ public class AlarmService extends Service implements WeatherGrabber.WeatherListe
             //if timeUntil is +, no alarm
             //if timeUntil is <= 0, setAlarm
 
-            long millisUntilWork = (hours * 60l + minutes) * 60l * 1000l;
-            long timeUntil = millisUntilWork - System.currentTimeMillis();
+//            long millisUntilWork = (hours * 60l + minutes) * 60l * 1000l;
+//            long timeUntil = millisUntilWork - System.currentTimeMillis();
+
+
+            long arrivalTime = (hours * 60l + minutes) * 60l * 1000l;
+
+
+            //long timeUntil = arrivalTime - System.currentTimeMillis();
+            long alarmTime = arrivalTime;
+
             // If weather is not available, but traffic is
             if (lastTrafficMinutes >= 0) {
                 // Evaluate if the individual should be woken up
-                timeUntil -= lastTrafficMinutes * 60l * 1000l;
+                alarmTime -= lastTrafficMinutes * 60l * 1000l;
             }
             // If traffic is not available, but weather is
             if (lastWeatherFactor >= 0) {
                 // Evauluate if the individual should be woken up
-                timeUntil -= 20l * lastWeatherFactor * 60l * 1000l;
+                alarmTime -= 20l * lastWeatherFactor * 60l * 1000l;
             }
 
 
-            if (timeUntil <= 0) {
-                SetAlarm.setAlarm(getApplicationContext());
+
+            if (SetAlarm.alertCanOccur) {
+                if (currentTime > alarmTime) {
+                    SetAlarm.setAlarm(getApplicationContext());
+
+                    Log.e("12345", "currentTime > alarmTime");
+                    Log.e("12345", "currentTime: " + currentTime);
+                    Log.e("12345", "alarmTime: " + alarmTime);
+
+                } else {
+                    //wait some more
+                }
+            } else {
+                Log.e("12345", "alert is disabled");
             }
+
+
+//            if (timeUntil <= 0 && SetAlarm.alertCanOccur) {
+//                SetAlarm.setAlarm(getApplicationContext());
+//            }
 
 
             //SetAlarm.setAlarm(getApplicationContext());
